@@ -122,7 +122,7 @@
       <h1>개인정보처리방침 · Privacy Policy</h1>
       <p>앱: <strong>My Trading Story</strong> (껄무새와 함께하는 타임슬립 부자 게임)</p>
       <p>번들 ID: <code>com.liveasfilm.mytradingstory</code></p>
-      <p><span class="effective">시행일자 / Effective: 2026-05-05</span></p>
+      <p><span class="effective">시행일자 / Effective: 2026-09-30</span></p>
       <nav class="lang">
         <a href="#ko">한국어</a>
         <a href="#en">English</a>
@@ -135,89 +135,35 @@
       <p>본 개인정보처리방침(이하 "본 방침")은 모바일 게임 <strong>My Trading Story</strong>(이하 "본 앱")가 이용자의 개인정보를 어떻게 수집·이용·보관·파기하는지를 설명합니다. 본 앱은 개인 개발자 <strong>liveasfilm</strong>(이하 "운영자")이 개발 및 운영하며, 운영자는 「개인정보 보호법」(대한민국), GDPR, CCPA 등 관련 법규를 준수합니다.</p>
 
       <h2>2. 수집하는 정보</h2>
-
-      <h3>2.1 자동으로 수집되는 정보</h3>
-      <ul>
-        <li><strong>익명 인증 식별자</strong>: Firebase Authentication이 발급하는 익명 UID. 임의의 문자열이며 그 자체로는 개인을 식별할 수 없습니다.</li>
-        <li><strong>광고 송출용 식별자</strong>: Google AdMob SDK가 광고 송출을 위해 처리하는 식별자(예: Android 광고 ID, Apple IDFA). 본 앱은 이를 직접 저장·전송하지 않으며, AdMob의 정책에 따라 처리됩니다.</li>
-      </ul>
-
-      <h3>2.2 이용자가 직접 입력하는 정보</h3>
-      <ul>
-        <li><strong>닉네임</strong>(최대 24자): 리더보드(순위표)에 점수를 등록할 때 입력합니다. 실명·연락처 등 개인정보 입력은 권장하지 않습니다.</li>
-      </ul>
-
-      <h3>2.3 서버(Firestore)에 저장되는 정보 — 리더보드 등록 시에만</h3>
-      <ul>
-        <li>익명 UID 또는 플랫폼 플레이어 ID</li>
-        <li>닉네임(이용자가 입력한 표시명)</li>
-        <li>최종 총자산(KRW), 게임 달성 시각, 게임 플레이 시각</li>
-        <li>인증 제공자 종류(<code>anonymous</code>, <code>gamecenter</code>, <code>playgames</code>)</li>
-        <li>앱 버전 및 서버 측 업데이트 시각</li>
-      </ul>
-
-      <h3>2.4 단말기에만 저장되는 정보(서버로 전송되지 않음)</h3>
-      <ul>
-        <li>게임 진행 상태(보유 자산, 거래 내역, 월별 스냅샷, 캐시·포지션 등)</li>
-        <li>최근 게임 기록(최대 50개)</li>
-        <li>BGM/효과음 음소거 설정, 프리미엄(광고 제거) 활성 여부, 실명 표기 옵션</li>
-        <li>익명 플레이어 UUID(<code>SharedPreferences</code> 보관)</li>
-        <li>SQLite 데이터베이스(<code>game_data.db</code>)에 포함된 시세·거시지표 등 게임 데이터</li>
-      </ul>
-
-      <h3>2.5 인앱결제(IAP) 정보</h3>
-      <ul>
-        <li>제공 상품: <code>remove_ads</code>(광고 제거), <code>real_names</code>(실제 종목명 표시).</li>
-        <li>결제·영수증은 Apple App Store / Google Play가 처리하며, 운영자는 결제 카드 번호 등 결제 수단 정보를 수집·보관하지 않습니다. 본 앱은 활성/비활성 상태만 단말기에 저장합니다.</li>
-      </ul>
-
-      <h3>2.6 선택적 플랫폼 로그인 정보</h3>
-      <ul>
-        <li>이용자가 Apple Game Center 또는 Google Play Games에 로그인한 경우, 해당 플랫폼이 제공하는 플레이어 ID·표시명을 리더보드에 사용합니다. 로그인하지 않으면 익명 UUID가 사용됩니다.</li>
-      </ul>
-
-      <h3>2.7 수집하지 않는 정보</h3>
-      <ul>
-        <li>위치 정보, 연락처, 사진, 카메라, 마이크</li>
-        <li>분석(Analytics) SDK 데이터, 크래시 리포트, 푸시 알림용 토큰</li>
-        <li>이메일·전화번호·실명 등 별도의 회원 정보(본 앱은 회원가입 절차가 없습니다)</li>
-      </ul>
-
-      <h2>3. 수집·이용 목적</h2>
+<h3>2.1 계정과 로그인</h3><p>기본 플레이에는 별도의 회원가입이 필요하지 않습니다. Firebase Authentication은 기록 저장을 위한 UID를 사용하며, 사용자는 선택적으로 Game Center, Play Games 또는 이메일/비밀번호 계정을 연결할 수 있습니다. 이메일 로그인을 선택하면 이메일 주소와 인증 정보가 Firebase Authentication에서 처리됩니다. 앱은 비밀번호를 기기 설정이나 공개 순위 문서에 저장하지 않습니다.</p>
+<h3>2.2 개인 기록과 선택형 공개 랭킹</h3><p>완료한 투자 여정의 계획, 중간 조정, 자산 이력, 결과와 플레이 시각은 기기에 보관되며, 인터넷 연결이 가능한 경우 UID와 함께 개인 클라우드 기록으로 Firestore에 저장됩니다. 개인 기록은 자동으로 공개 랭킹에 게시되지 않습니다. 사용자가 순위 등록을 선택하고 공개 내용에 동의하면 닉네임, 최종 결과, 도전 종류와 투자 계획 등의 순위 정보가 공개됩니다.</p>
+<h3>2.3 기기에 보관하는 정보</h3><p>진행 중인 여정, 이전 버전 기록, 소리·언어·알림 설정과 구매 활성 상태는 기기에 저장됩니다. 완료한 여정의 개인 클라우드 동기화는 아래와 같이 별도로 처리됩니다.</p>
+<h3>2.4 인앱 구매</h3><p>광고 제거(remove_ads)와 실제 종목명(real_names)은 Apple App Store 또는 Google Play에서 결제·복원합니다. 개발자의 별도 서버 영수증 검증은 사용하지 않으며 카드 번호나 결제수단 정보는 수집하지 않습니다. Firebase Analytics는 스토어 구매 이벤트, 상품 식별자 및 금액·통화 정보를 사용 통계로 처리할 수 있습니다.</p>
+<h3>2.5 이용 분석</h3><p>본 앱은 Firebase Analytics를 사용합니다. 앱 시작, 세션, 화면 전환과 게임 이벤트, 앱·기기 정보 및 분석용 앱 인스턴스 식별자 등이 이용 현황 분석과 기능 개선을 위해 처리될 수 있습니다. 개발 코드에서 이메일이나 비밀번호를 분석 이벤트에 포함하지 않습니다.</p>
+<h3>2.6 광고 정보</h3><p>배너 광고와 여정 사이의 전면광고는 Google AdMob을 통해 제공됩니다. 광고 SDK는 IP 주소, 대략적 지역, 광고·앱 상호작용, 기기 식별자와 진단·성능 정보를 광고 제공 및 측정 등을 위해 처리할 수 있습니다. 식별자 접근은 운영체제의 권한과 SDK 설정에 따릅니다. 광고 제거 상품 적용 시 앱의 배너와 전면광고를 표시하지 않습니다.</p>
+<h3>2.7 요청하지 않는 권한</h3><p>앱은 카메라, 마이크, 연락처, 사진 라이브러리 또는 정밀 GPS 위치를 요구하지 않습니다. 게임 알림은 기기에서 예약하는 로컬 알림이며 원격 푸시용 토큰을 저장하지 않습니다. 광고 SDK의 IP 기반 대략적 지역 처리와는 구분됩니다.</p>
+<h2>3. 수집·이용 목적</h2>
       <ul>
         <li>게임 기능 제공 및 진행 상태 저장</li>
         <li>리더보드 순위 표시 및 운영</li>
         <li>광고 송출(프리미엄 미구매 이용자 한정)</li>
         <li>인앱결제 처리 및 부정 사용 방지</li>
         <li>법령상 의무 이행 및 분쟁 대응</li>
-      </ul>
-
-      <h2>4. 보유 기간 및 파기</h2>
-      <ul>
-        <li><strong>단말기 로컬 데이터</strong>: 앱 삭제 시 함께 제거됩니다.</li>
-        <li><strong>리더보드 데이터(Firestore)</strong>: 이용자의 삭제 요청 시 즉시 파기합니다. 별도 요청이 없는 경우 서비스 운영을 위해 보유합니다.</li>
-        <li>익명 UID 자체에는 개인식별정보가 포함되지 않습니다.</li>
-      </ul>
-
-      <h2>5. 제3자 서비스 및 데이터 처리자</h2>
+       <li>이용 분석과 기능 개선</li>
+</ul>
+<h2>4. 보유 기간 및 파기</h2><p>앱의 설정 → 계정 연결 · 클라우드 → 계정과 모든 기록 삭제에서 계정, 개인 클라우드 기록, 공개 순위 및 이 기기의 진행 기록 삭제를 요청할 수 있습니다. 다시 인증해야 할 수 있습니다. 스토어 구매는 이 기능으로 환불되지 않으며, 구매 복원으로 다시 확인할 수 있습니다. 제3자 SDK의 진단·광고·분석 데이터 보관은 해당 서비스의 처리 정책과 설정이 적용됩니다. 기록은 서비스 제공을 위해 삭제 요청 전까지 보관됩니다. 인터넷 연결이나 재인증이 필요하면 삭제가 완료된 뒤 앱에 결과가 표시됩니다. 앱 삭제는 서버 기록이나 구매를 자동으로 삭제하지 않습니다.</p>
+<h2>5. 제3자 서비스 및 데이터 처리자</h2>
       <p>본 앱은 다음 제3자 서비스를 이용하며, 각 서비스의 개인정보 처리에 관해서는 해당 사업자의 정책이 적용됩니다.</p>
       <ul>
-        <li>Google Firebase (Authentication, Cloud Firestore) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li>Google Firebase (Authentication, Cloud Firestore, Analytics) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
         <li>Google AdMob — <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob 데이터 처리</a></li>
         <li>Apple Game Center — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
         <li>Google Play Games Services — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
         <li>Apple App Store / Google Play(인앱결제) — Apple/Google 각사의 정책</li>
       </ul>
 
-      <h2>6. 광고 및 트래킹</h2>
-      <ul>
-        <li>본 앱은 자체 분석(Analytics) 또는 사용자 행동 추적 SDK를 <strong>사용하지 않습니다</strong>.</li>
-        <li>배너 광고는 Google AdMob을 통해 송출되며, 프리미엄(광고 제거) 구매 시 노출되지 않습니다.</li>
-        <li>iOS의 앱 추적 투명성(ATT) 권한은 요청하지 않으며, 따라서 IDFA 기반 맞춤 추적은 수행되지 않습니다.</li>
-        <li>향후 분석 SDK를 도입하거나 데이터 처리 범위가 변경될 경우, 본 방침을 사전에 갱신합니다.</li>
-      </ul>
-
-      <h2>7. 아동 개인정보 보호</h2>
+      <h2>6. 광고 및 트래킹</h2><p>배너 광고와 여정 사이의 전면광고는 Google AdMob을 통해 제공됩니다. 광고 SDK는 IP 주소, 대략적 지역, 광고·앱 상호작용, 기기 식별자와 진단·성능 정보를 광고 제공 및 측정 등을 위해 처리할 수 있습니다. 식별자 접근은 운영체제의 권한과 SDK 설정에 따릅니다. 광고 제거 상품 적용 시 앱의 배너와 전면광고를 표시하지 않습니다. 본 앱은 Firebase Analytics를 사용합니다. 앱 시작, 세션, 화면 전환과 게임 이벤트, 앱·기기 정보 및 분석용 앱 인스턴스 식별자 등이 이용 현황 분석과 기능 개선을 위해 처리될 수 있습니다. 개발 코드에서 이메일이나 비밀번호를 분석 이벤트에 포함하지 않습니다. iOS 14 이상에서 앱 추적 투명성(ATT) 권한을 요청하지 않으므로 IDFA 접근을 허용받지 않습니다. 광고 SDK는 운영체제에서 허용하는 앱·게시자 범위 식별자와 집계형 광고 측정 기능을 사용할 수 있습니다.</p>
+<h2>7. 아동 개인정보 보호</h2>
       <p>본 앱은 만 14세 미만 아동(미국 COPPA 기준 13세 미만)을 주된 이용 대상으로 하지 않으며, 의도적으로 아동의 개인정보를 수집하지 않습니다. 만일 보호자께서 아동의 정보가 본 앱에 등록되었음을 확인하신 경우, 아래 문의처로 연락 주시면 즉시 삭제 조치합니다.</p>
 
       <h2>8. 이용자의 권리</h2>
@@ -225,7 +171,7 @@
       <ul>
         <li>열람·정정·삭제·처리정지·이전 요청</li>
         <li>리더보드 등록 항목의 삭제 요청</li>
-        <li>동의 철회(향후 광고 제공 거부 등)</li>
+        <li>동의 및 개인정보 처리에 관한 요청</li>
       </ul>
 
       <h2>9. 데이터 보안</h2>
@@ -254,89 +200,35 @@
       <p>This Privacy Policy ("Policy") describes how the mobile game <strong>My Trading Story</strong> (Korean title: 껄무새와 함께하는 타임슬립 부자 게임; the "App") collects, uses, retains, and deletes user information. The App is developed and operated by an individual developer, <strong>liveasfilm</strong> (the "Operator"), who endeavors to comply with applicable laws including the Personal Information Protection Act (Republic of Korea), GDPR, and CCPA.</p>
 
       <h2>2. Information We Collect</h2>
-
-      <h3>2.1 Automatically Collected</h3>
-      <ul>
-        <li><strong>Anonymous authentication ID</strong>: An anonymous UID issued by Firebase Authentication. It is a random string and does not by itself identify an individual.</li>
-        <li><strong>Advertising identifiers</strong>: Identifiers (e.g., Android Advertising ID, Apple IDFA) processed by the Google AdMob SDK to serve ads. The App does not directly store or transmit these; they are handled per AdMob's policies.</li>
-      </ul>
-
-      <h3>2.2 Information You Provide</h3>
-      <ul>
-        <li><strong>Display name</strong> (max 24 characters): Submitted when you register a score on the leaderboard. We discourage entering real names, contact details, or other PII.</li>
-      </ul>
-
-      <h3>2.3 Stored on Server (Firestore) — Only When You Submit a Leaderboard Entry</h3>
-      <ul>
-        <li>Anonymous UID or platform player ID</li>
-        <li>Display name you entered</li>
-        <li>Final total assets (KRW), achievement timestamp, gameplay timestamp</li>
-        <li>Authentication provider type (<code>anonymous</code>, <code>gamecenter</code>, <code>playgames</code>)</li>
-        <li>App version and server-side update timestamp</li>
-      </ul>
-
-      <h3>2.4 Stored Only on Your Device (Not Transmitted)</h3>
-      <ul>
-        <li>Game progress (holdings, trade history, monthly snapshots, cash, positions, etc.)</li>
-        <li>Recent game records (up to 50 entries)</li>
-        <li>BGM/SFX mute state, premium (ad-removed) status, real-names display option</li>
-        <li>Anonymous player UUID stored in <code>SharedPreferences</code></li>
-        <li>SQLite database (<code>game_data.db</code>) containing in-game market/macro data</li>
-      </ul>
-
-      <h3>2.5 In-App Purchases (IAP)</h3>
-      <ul>
-        <li>Available products: <code>remove_ads</code> and <code>real_names</code>.</li>
-        <li>Payments and receipts are handled by Apple App Store / Google Play. The Operator does not collect or retain payment instrument details. The App stores only an active/inactive flag locally on your device.</li>
-      </ul>
-
-      <h3>2.6 Optional Platform Sign-In</h3>
-      <ul>
-        <li>If you sign in to Apple Game Center or Google Play Games, the App uses the player ID and display name provided by the platform for the leaderboard. If you do not sign in, an anonymous UUID is used instead.</li>
-      </ul>
-
-      <h3>2.7 Information We Do Not Collect</h3>
-      <ul>
-        <li>Location, contacts, photos, camera, microphone</li>
-        <li>Analytics SDK data, crash reports, push-notification tokens</li>
-        <li>Email, phone number, real name, or any account-registration data (the App has no sign-up flow)</li>
-      </ul>
-
-      <h2>3. Purposes of Collection and Use</h2>
+<h3>2.1 Accounts and sign-in</h3><p>Core gameplay does not require registration. Firebase Authentication supplies a UID for saved records. You may optionally link Game Center, Play Games or an email/password account. Email addresses and authentication information are processed by Firebase Authentication when email sign-in is selected. The app does not save your password in local preferences or public ranking documents.</p>
+<h3>2.2 Private records and optional public rankings</h3><p>Completed journeys, including plans, adjustments, asset history, results and play times, are retained locally and synced as private Firestore records under your UID when a connection is available. Private records are not automatically published to world rankings. If you explicitly submit a score and consent to publication, your display name, result, challenge and investment-plan information are made public.</p>
+<h3>2.3 Data stored on your device</h3><p>The current journey, legacy records, sound/language/reminder settings and purchase entitlement state are stored on your device. Completed journeys can also sync to private cloud records as described above.</p>
+<h3>2.4 In-app purchases</h3><p>Remove Ads (remove_ads) and real asset names (real_names) are purchased and restored through Apple App Store or Google Play. There is no developer-operated server receipt verification. The developer does not collect card numbers or payment-instrument details. Firebase Analytics may process store purchase events, product identifiers, values and currencies for usage statistics.</p>
+<h3>2.5 Usage analytics</h3><p>The app uses Firebase Analytics. App launches, sessions, screen views, game events, app/device information and an app-instance identifier may be processed to understand usage and improve features. Developer-authored analytics events do not contain email addresses or passwords.</p>
+<h3>2.6 Advertising data</h3><p>Google AdMob provides banners and interstitials between journeys. Its SDK may process IP addresses, coarse location, ad/app interactions, device identifiers and diagnostic or performance information for advertising and measurement. Identifier access depends on operating-system permissions and SDK settings. The app does not display its banner or interstitial ads when Remove Ads is active.</p>
+<h3>2.7 Permissions not requested</h3><p>The app does not request camera, microphone, contacts, photo-library or precise GPS access. Journey reminders are locally scheduled notifications; remote push tokens are not stored. This is separate from coarse location derived from IP addresses by advertising services.</p>
+<h2>3. Purposes of Collection and Use</h2>
       <ul>
         <li>Providing the game and saving game progress</li>
         <li>Operating and displaying the leaderboard</li>
         <li>Serving ads (only to non-premium users)</li>
         <li>Processing in-app purchases and preventing abuse</li>
         <li>Complying with legal obligations and handling disputes</li>
-      </ul>
-
-      <h2>4. Retention and Deletion</h2>
-      <ul>
-        <li><strong>Local data</strong>: Removed when you uninstall the App.</li>
-        <li><strong>Leaderboard data (Firestore)</strong>: Deleted promptly upon your request. In the absence of a request, retained to operate the service.</li>
-        <li>Anonymous UIDs do not in themselves contain personally identifiable information.</li>
-      </ul>
-
-      <h2>5. Third-Party Services and Data Processors</h2>
+       <li>Usage analytics and product improvement</li>
+</ul>
+<h2>4. Retention and Deletion</h2><p>Use Settings → Account / Cloud → Delete account and all records to request deletion of your account, private cloud history, public rankings and progress stored on this device. Reauthentication may be required. This does not refund store purchases; purchases can be restored through the store. Third-party diagnostic, advertising and analytics retention follows the relevant provider&#x27;s settings and policies. Records are retained to operate the service until deletion is requested. Deletion may require connectivity or reauthentication, and the app reports completion. Uninstalling the app does not automatically delete cloud records or store purchases.</p>
+<h2>5. Third-Party Services and Data Processors</h2>
       <p>The App uses the following third-party services. Their respective privacy policies apply to their data processing.</p>
       <ul>
-        <li>Google Firebase (Authentication, Cloud Firestore) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li>Google Firebase (Authentication, Cloud Firestore, Analytics) — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
         <li>Google AdMob — <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob data handling</a></li>
         <li>Apple Game Center — <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
         <li>Google Play Games Services — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
         <li>Apple App Store / Google Play (in-app purchases) — respective policies of Apple and Google</li>
       </ul>
 
-      <h2>6. Advertising and Tracking</h2>
-      <ul>
-        <li>The App does <strong>not</strong> use any first-party analytics or behavior-tracking SDK.</li>
-        <li>Banner ads are served via Google AdMob and are not displayed once the premium (remove-ads) IAP is active.</li>
-        <li>The App does not request iOS App Tracking Transparency (ATT) authorization and therefore does not perform IDFA-based personalized tracking.</li>
-        <li>If we introduce analytics or expand data processing in the future, this Policy will be updated in advance.</li>
-      </ul>
-
-      <h2>7. Children's Privacy</h2>
+      <h2>6. Advertising and Tracking</h2><p>Google AdMob provides banners and interstitials between journeys. Its SDK may process IP addresses, coarse location, ad/app interactions, device identifiers and diagnostic or performance information for advertising and measurement. Identifier access depends on operating-system permissions and SDK settings. The app does not display its banner or interstitial ads when Remove Ads is active. The app uses Firebase Analytics. App launches, sessions, screen views, game events, app/device information and an app-instance identifier may be processed to understand usage and improve features. Developer-authored analytics events do not contain email addresses or passwords. On iOS 14 and later the app does not request App Tracking Transparency (ATT) authorization and therefore is not authorized to access the IDFA. The advertising SDK may use operating-system-permitted app/publisher-scoped identifiers and aggregate advertising measurement.</p>
+<h2>7. Children's Privacy</h2>
       <p>The App is not directed at children under 14 (or under 13 under the U.S. COPPA standard) and does not knowingly collect personal information from such children. If a parent or guardian becomes aware that a child's information has been registered with the App, please contact us at the address below and we will delete it promptly.</p>
 
       <h2>8. Your Rights</h2>
@@ -344,7 +236,7 @@
       <ul>
         <li>Access, correction, deletion, restriction of processing, and portability</li>
         <li>Deletion of your leaderboard entry</li>
-        <li>Withdrawal of consent (e.g., opting out of advertising in future versions)</li>
+        <li>Requests concerning consent or data processing</li>
       </ul>
 
       <h2>9. Data Security</h2>
@@ -365,8 +257,12 @@
       </ul>
     </section>
 
+<section id="delete-account"><h2>계정 및 데이터 삭제 · Account and data deletion</h2>
+<p><strong>My Trading Story / liveasfilm</strong></p>
+<p>앱의 설정 → 계정 연결 · 클라우드 → 계정과 모든 기록 삭제를 이용하세요. 앱을 사용할 수 없다면 <a href="mailto:liveasfilm@gmail.com?subject=My%20Trading%20Story%20account%20deletion">liveasfilm@gmail.com</a>으로 계정 및 기록 삭제를 요청할 수 있습니다. 연결한 이메일 또는 앱에 표시된 UID를 알려주세요. 비밀번호나 결제 정보는 보내지 마세요. 계정 소유 확인 후 Firebase 계정, 개인 클라우드 기록과 공개 순위를 삭제합니다. 영업일 기준 7일 이내 응답을 목표로 합니다. 스토어 구매·환불 및 광고·분석 서비스의 보관은 해당 제공자의 정책에 따릅니다.</p>
+<p>Use Settings → Account / Cloud → Delete account and all records. If you cannot use the app, email <a href="mailto:liveasfilm@gmail.com?subject=My%20Trading%20Story%20account%20deletion">liveasfilm@gmail.com</a> with a request to delete your account and records. Provide your linked email address or UID shown in the app; do not send passwords or payment information. After verifying account ownership, we delete the Firebase account, private cloud records and public rankings. We aim to respond within 7 business days. Store purchases/refunds and advertising/analytics service retention follow the respective provider's policies.</p></section>
     <footer>
-      © liveasfilm. My Trading Story. Effective 2026-05-05.
+      © liveasfilm. My Trading Story. Effective 2026-09-30.
     </footer>
   </main>
 </body>
